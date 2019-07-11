@@ -10,4 +10,5 @@ RDEPENDS_${PN} = "\
      git \
      vim \
      nvmfs \
+     curl \
 "
