@@ -4,7 +4,6 @@ PR = "r1"
 inherit packagegroup
 
 RDEPENDS_${PN} = "\
-     init-ifupdown \
      openssh \
      docker \
      git \

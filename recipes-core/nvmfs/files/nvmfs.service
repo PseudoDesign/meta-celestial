@@ -1,0 +1,16 @@
+[Unit]
+Description=Manage the NVM partition
+DefaultDependencies=false
+Before=local-fs.target
+RequiresMountsFor=/
+
+[Service]
+Type=oneshot
+RemainAfterExit=Yes
+StandardOutput=syslog
+TimeoutSec=0
+ExecStart=/bin/bash /sbin/init-nvmfs
+ExecStop=/bin/umount /nvm
+
+[Install]
+WantedBy=local-fs.target
