@@ -29,6 +29,9 @@ sleep 2
 sync
 }
 
+#Make sure the mountpoint exists
+mkdir -p "$nvm_location"
+
 # Exit if the partition is already mounted
 if df -h | grep -q "$nvm_location"; then
     echo "NVM partition is already mounted"
